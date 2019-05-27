@@ -1,3 +1,4 @@
+import { Timer } from "../../components/timer/timer";
 
 
 export class DashboardPage {
@@ -5,12 +6,14 @@ export class DashboardPage {
     this.root = selector;
     this.email = email;
     this.loadUI();
+    new Timer('timer');
   }
 
   loadUI() {
     document.querySelector(this.root).innerHTML = `
-      <div id="timer></div>
+      <div id="timer">13h</div>
       <h1>Hello ${this.email}</h1>
     `;
   }
+
 }
