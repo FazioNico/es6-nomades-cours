@@ -32,7 +32,8 @@ export class MyApp{
       if (user) {
         new DashboardPage({
           selector: this.root,
-          email: user.email
+          email: user.email,
+          auth: this.auth
         })
       }
       else {

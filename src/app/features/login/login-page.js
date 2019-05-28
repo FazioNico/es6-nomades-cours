@@ -1,5 +1,3 @@
-import { DashboardPage } from '../dashboard/dashboard-page';
-
 export class LoginPage {
   constructor({selector = null, auth = null, googleProvider = null}) {
     this.root = selector;
@@ -9,9 +7,10 @@ export class LoginPage {
     this.loadEventUI()
   }
 
-  loadUI() {
+  loadUI() { 
+    document.body.style.background = `none`;
     document.querySelector(this.root).innerHTML = `
-      <h1>Welcome</h1>
+      <h1>Welcome to an awesome app</h1>
       <button>login / signin</button>
     `;
   }

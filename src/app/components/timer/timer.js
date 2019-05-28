@@ -3,7 +3,7 @@ export class Timer {
   constructor(selector) {
     this.root = selector;
     this.displayTme();
-    setInterval(_=> this.displayTme(), 1000)
+    this.interval = setInterval(_=> this.displayTme(), 1000)
   } 
 
 
@@ -12,6 +12,9 @@ export class Timer {
     let dateTime = new Date();
     // write into time HTMLelement
     const time = document.getElementById(this.root);
+    if (!time) {
+      return clearInterval(this.interval);
+    }
     time.innerHTML = dateTime.toLocaleTimeString();
  
   }

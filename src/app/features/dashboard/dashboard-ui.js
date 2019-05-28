@@ -3,5 +3,6 @@ export const skeleton = (data) => {
   return `
     <div id="timer">13h</div>
     <h1>Hello ${data.email}</h1>
+    <button>logout</button>
   `;
 }
